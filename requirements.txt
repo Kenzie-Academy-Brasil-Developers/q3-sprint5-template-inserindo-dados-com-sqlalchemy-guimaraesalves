@@ -1,4 +1,4 @@
-alembic==1.7.5
+pipalembic==1.7.5
 black==21.9b0
 click==8.0.1
 environs==9.3.3
