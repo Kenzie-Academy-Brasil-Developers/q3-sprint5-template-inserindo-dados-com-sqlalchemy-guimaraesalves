@@ -1,6 +1,7 @@
 from flask import Flask
 from environs import Env
 from app.configs import database, migrations
+from app import routes
 
 
 def create_app():
@@ -15,5 +16,8 @@ def create_app():
 
     database.init_app(app)
     migrations.init_app(app)
+
+    # Importação depois de database e migrations
+    routes.init_app(app)
 
     return app
